@@ -1,0 +1,30 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* Solución para el problema de scroll horizontal con header fijo */
+header {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Asegurar que las tablas y contenido ancho se muestren correctamente */
+.wrapper {
+  width: auto !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+}
+
+/* Mejorar la visualización de tablas */
+table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin: 1em 0;
+}
+
+/* Asegurar que el contenido no quede oculto bajo el header */
+body {
+  position: relative;
+}
