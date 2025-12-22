@@ -1,0 +1,4 @@
+theme: jekyll-theme-minimal
+title: PoliAcredita - Documentación
+description: Documentación de Criterios de Aceptación y Planes de Prueba
+markdown: kramdown
