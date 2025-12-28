@@ -9,25 +9,32 @@ header {
   z-index: 1 !important;
 }
 
-/* Reducir el espacio horizontal entre columnas del layout del tema */
+/* Layout más compacto - reducir espacio entre columnas */
 .wrapper {
   width: 100% !important;
-  max-width: 1180px !important; /* antes ocupaba casi todo el viewport generando un hueco grande al centro */
-  padding: 1.5rem 1.25rem !important;
+  max-width: 1400px !important;
+  padding: 20px 30px !important;
   margin: 0 auto !important;
-  overflow-x: visible !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 20px !important;
 }
 
-/* Ajustar el ancho relativo de la columna lateral (section) y del contenido (article) */
+/* Columna lateral más pequeña */
 section {
-  width: 26% !important;
-  min-width: 240px;
-  margin-right: 2.5% !important;
+  width: 200px !important;
+  min-width: 180px !important;
+  flex-shrink: 0 !important;
+  float: none !important;
 }
 
+/* Contenido principal ocupa el resto del espacio */
 article {
-  width: 68% !important;
-  float: right;
+  flex: 1 !important;
+  min-width: 0 !important;
+  width: auto !important;
+  float: none !important;
+  overflow-x: auto !important;
 }
 
 /* Mejorar la visualización de tablas */
