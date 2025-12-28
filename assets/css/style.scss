@@ -3,49 +3,37 @@
 
 @import "{{ site.theme }}";
 
-/* Solución para el problema de scroll horizontal con header fijo */
-header {
-  position: relative !important;
-  z-index: 1 !important;
-}
-
-/* Layout más compacto - reducir espacio entre columnas */
-.wrapper {
-  width: 100% !important;
-  max-width: 1400px !important;
-  padding: 20px 30px !important;
+/* Layout de ancho completo para el contenido */
+.main-content {
+  max-width: 95% !important;
+  padding: 2rem 2rem !important;
   margin: 0 auto !important;
-  display: flex !important;
-  flex-wrap: wrap !important;
-  gap: 20px !important;
 }
 
-/* Columna lateral más pequeña */
-section {
-  width: 200px !important;
-  min-width: 180px !important;
-  flex-shrink: 0 !important;
-  float: none !important;
-}
-
-/* Contenido principal ocupa el resto del espacio */
-article {
-  flex: 1 !important;
-  min-width: 0 !important;
-  width: auto !important;
-  float: none !important;
-  overflow-x: auto !important;
-}
-
-/* Mejorar la visualización de tablas */
+/* Tablas con scroll horizontal */
 table {
   display: block;
+  width: 100%;
   overflow-x: auto;
   white-space: nowrap;
-  margin: 1em 0;
+  margin: 1.5em 0;
+  border-collapse: collapse;
 }
 
-/* Asegurar que el contenido no quede oculto bajo el header */
-body {
-  position: relative;
+table th, table td {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+}
+
+/* Header más compacto */
+.page-header {
+  padding: 1.5rem 1rem !important;
+}
+
+/* Mejor legibilidad del contenido */
+.main-content h1, 
+.main-content h2, 
+.main-content h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
 }
