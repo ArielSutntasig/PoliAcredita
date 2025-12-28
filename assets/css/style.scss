@@ -9,11 +9,25 @@ header {
   z-index: 1 !important;
 }
 
-/* Asegurar que las tablas y contenido ancho se muestren correctamente */
+/* Reducir el espacio horizontal entre columnas del layout del tema */
 .wrapper {
-  width: auto !important;
-  max-width: 100% !important;
-  overflow-x: auto !important;
+  width: 100% !important;
+  max-width: 1180px !important; /* antes ocupaba casi todo el viewport generando un hueco grande al centro */
+  padding: 1.5rem 1.25rem !important;
+  margin: 0 auto !important;
+  overflow-x: visible !important;
+}
+
+/* Ajustar el ancho relativo de la columna lateral (section) y del contenido (article) */
+section {
+  width: 26% !important;
+  min-width: 240px;
+  margin-right: 2.5% !important;
+}
+
+article {
+  width: 68% !important;
+  float: right;
 }
 
 /* Mejorar la visualización de tablas */
