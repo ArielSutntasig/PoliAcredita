@@ -1,162 +1,31 @@
-# HU: Visualizar Matriz de Relación RAA vs RA
+# **Plan de Pruebas y Casos de Prueba para HU: Visualizar matriz de relación RAA vs RA**
 
-## Plan de Pruebas
-
-| Campo | Detalle |
-|-------|---------|
-| **Fecha Ejecución** | 23-10-2025 |
-| **Modo Ejecución** | Manual |
-| **Prioridad Testing** | Alta |
-| **Módulo** | Matrices - RAA vs RA |
-| **Rol** | Profesor |
+**(Fecha de ejecución estimada para todos los casos: 23-10-2025)**
 
 ---
 
-## Escenario 1: Visualizar matriz con relaciones existentes
 
-| Campo | Detalle |
-|-------|---------|
-| **Complejidad** | Media |
-| **Nombre Testing** | CP_Visualizar_Matriz_Con_Relaciones |
-| **Pre-Condiciones** | El profesor ha iniciado sesión correctamente. Existen relaciones RAA-RA establecidas |
-| **Descripción Caso** | Verificar que la matriz muestra correctamente las relaciones entre RAA y RA |
-| **Tipo de Caso** | Positivo |
-| **Tipo de Prueba** | Funcional |
-| **Restricciones** | Deben existir datos previos de relaciones |
-
-### Pasos
-
-| Paso | Acción |
-|------|--------|
-| 1 | Ingresar al sistema como Profesor |
-| 2 | Acceder al módulo de Matrices |
-| 3 | Seleccionar la opción "Matriz RAA vs RA" |
-| 4 | Esperar a que se cargue la matriz |
-
-### Resultados
-
-| Tipo | Descripción |
-|------|-------------|
-| **Esperado** | La matriz se muestra con los RAA en filas y los RA en columnas. Las celdas con relaciones muestran el nivel de contribución. Los colores o indicadores visuales son claros y distintivos |
-| **Obtenido** | ESTADO PRUEBA |
-| **Observaciones** | - |
-
----
-
-## Escenario 2: Visualizar matriz sin relaciones
-
-| Campo | Detalle |
-|-------|---------|
-| **Complejidad** | Baja |
-| **Nombre Testing** | CP_Visualizar_Matriz_Sin_Relaciones |
-| **Pre-Condiciones** | El profesor ha iniciado sesión correctamente. No existen relaciones RAA-RA |
-| **Descripción Caso** | Verificar el comportamiento de la matriz cuando no hay relaciones establecidas |
-| **Tipo de Caso** | Negativo |
-| **Tipo de Prueba** | Funcional |
-| **Restricciones** | Ninguna |
-
-### Pasos
-
-| Paso | Acción |
-|------|--------|
-| 1 | Acceder al módulo de matrices |
-| 2 | Seleccionar una asignatura sin relaciones |
-| 3 | Observar la matriz generada |
-
-### Resultados
-
-| Tipo | Descripción |
-|------|-------------|
-| **Esperado** | La matriz se muestra vacía o con indicadores de "sin relación". Se muestra un mensaje orientativo. Las opciones para crear relaciones están disponibles |
-| **Obtenido** | ESTADO PRUEBA |
-| **Observaciones** | - |
-
----
-
-## Escenario 3: Verificar leyenda de niveles de contribución
-
-| Campo | Detalle |
-|-------|---------|
-| **Complejidad** | Baja |
-| **Nombre Testing** | CP_Verificar_Leyenda_Niveles |
-| **Pre-Condiciones** | La matriz está cargada con datos |
-| **Descripción Caso** | Verificar que existe una leyenda que explica los niveles de contribución |
-| **Tipo de Caso** | Positivo |
-| **Tipo de Prueba** | Funcional |
-| **Restricciones** | Ninguna |
-
-### Pasos
-
-| Paso | Acción |
-|------|--------|
-| 1 | Acceder a la matriz RAA vs RA |
-| 2 | Ubicar la leyenda o guía de colores/niveles |
-| 3 | Verificar que corresponde a los valores mostrados en la matriz |
-
-### Resultados
-
-| Tipo | Descripción |
-|------|-------------|
-| **Esperado** | La leyenda está visible y accesible. Muestra todos los niveles de contribución (Alto, Medio, Bajo). Los colores/indicadores coinciden con los usados en la matriz |
-| **Obtenido** | ESTADO PRUEBA |
-| **Observaciones** | - |
-
----
-
-## Escenario 4: Interactuar con celdas de la matriz
-
-| Campo | Detalle |
-|-------|---------|
-| **Complejidad** | Media |
-| **Nombre Testing** | CP_Interactuar_Celdas_Matriz |
-| **Pre-Condiciones** | La matriz está cargada |
-| **Descripción Caso** | Verificar que las celdas de la matriz son interactivas |
-| **Tipo de Caso** | Positivo |
-| **Tipo de Prueba** | Funcional |
-| **Restricciones** | El usuario debe tener permisos de edición |
-
-### Pasos
-
-| Paso | Acción |
-|------|--------|
-| 1 | Acceder a la matriz RAA vs RA |
-| 2 | Hacer clic en una celda de la matriz |
-| 3 | Observar la respuesta del sistema |
-
-### Resultados
-
-| Tipo | Descripción |
-|------|-------------|
-| **Esperado** | Al hacer clic en una celda, se muestra información detallada o un diálogo de edición. Se puede ver la justificación si existe. Las opciones de edición/eliminación están disponibles según permisos |
-| **Obtenido** | ESTADO PRUEBA |
-| **Observaciones** | - |
-
----
-
-## Escenario 5: Verificar scroll horizontal y vertical
-
-| Campo | Detalle |
-|-------|---------|
-| **Complejidad** | Baja |
-| **Nombre Testing** | CP_Verificar_Scroll_Matriz |
-| **Pre-Condiciones** | La matriz tiene muchas filas y columnas |
-| **Descripción Caso** | Verificar que la matriz permite desplazamiento cuando hay muchos datos |
-| **Tipo de Caso** | Positivo |
-| **Tipo de Prueba** | Funcional |
-| **Restricciones** | Debe haber suficientes RAA y RA para requerir scroll |
-
-### Pasos
-
-| Paso | Acción |
-|------|--------|
-| 1 | Acceder a una matriz con muchos datos |
-| 2 | Intentar desplazarse horizontal y verticalmente |
-| 3 | Verificar la funcionalidad de scroll |
-
-### Resultados
-
-| Tipo | Descripción |
-|------|-------------|
-| **Esperado** | El scroll funciona correctamente en ambas direcciones. Los encabezados permanecen visibles al desplazarse. No hay pérdida de datos ni errores visuales |
-| **Obtenido** | ESTADO PRUEBA |
-| **Observaciones** | - |
+| Fecha Ejecución Estimada | Modo Ejecución | Prioridad Testing | Complejidad | Nombre Testing                                                                                                       | Pre-Condiciones                                                                                                                                                                                                                                      | Descripción Caso                                                       | Módulo                        | Rol      | Nombre Paso | Descripción Paso                                                                                                                                            | Resultados Esperados                                                                                                                                                                                                                                                                                                                                                               | Resultados Obtenido | Restricciones | Tipo de Caso | Tipo de Prueba | Observaciones |
+| --------------------------- | ----------------- | ------------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------- | -------------------------------- | ---------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------- | --------------- | -------------- | ---------------- | --------------- |
+| 23-10-2025                | Manual          | Alta              | Media       | HU: Visualizar matriz de relación RAA vs RA - Escenario 1 – Visualizar estructura completa de la matriz RAA vs RA  | *El usuario debe tener rol de Profesor<br>*El sistema debe tener al menos una asignatura creada con código PEA<br>*La asignatura debe tener RAA definidos previamente<br>*El usuario debe estar autenticado en el sistema                           | Verificar visualización completa de estructura de matriz RAA vs RA     | Asignaturas - Matriz RAA vs RA | Profesor | Paso1       | En el menú lateral izquierdo, dar clic en "Asignaturas"                                                                                                     | *Se presenta la pantalla de "Asignaturas (PEA)"<br>*Se muestra la tabla con las asignaturas registradas                                                                                                                                                                                                                                                                            | OK                  |               | Positivo     | Funcional      |               |
+|                           |                 |                   |             |                                                                                                                      |                                                                                                                                                                                                                                                      |                                                                         |                                |          | Paso2       | En la tabla de asignaturas, identificar la asignatura "Ingeniería de Software y Requerimientos" (código ISWD414) y dar clic en el icono de editar (lápiz) | *Se presenta el formulario "Crear/Editar Asignatura (PEA)"<br>*Se muestran tres tabs: "Asignatura (PEA)", "Resultados de Aprendizaje (RAA)", "Matriz de Relación entre RAA vs RA"                                                                                                                                                                                                 | OK                  |               |              |                |               |
+|                           |                 |                   |             |                                                                                                                      |                                                                                                                                                                                                                                                      |                                                                         |                                |          | Paso3       | Dar clic en el tab "Matriz RAA vs RA" (tercer tab)                                                                                                           | *El tab "Matriz RAA vs RA" se activa visualmente<br>*Se carga la vista de la matriz<br>*Se muestra el título "Matriz: Resultados de aprendizaje de Asignatura (RAA) y Resultados de aprendizaje (RA)" en la parte superior                                                                                                                                                        | OK                  |               |              |                |               |
+|                           |                 |                   |             |                                                                                                                      |                                                                                                                                                                                                                                                      |                                                                         |                                |          | Paso4       | Verificar la presencia y estado de los toggle buttons en la parte superior de la matriz                                                                      | *Se visualizan dos toggle buttons horizontales<br>*El toggle "Resultados de Aprendizaje de Asignatura" está activo con checkbox azul marcado y fondo azul<br>*El toggle "Resultados de Aprendizaje Carrera" está inactivo en color gris sin checkbox marcado<br>*Los toggles están ubicados debajo del título de la matriz                                                     | OK                  |               |              |                |               |
+|                           |                 |                   |             |                                                                                                                      |                                                                                                                                                                                                                                                      |                                                                         |                                |          | Paso5       | Verificar la presencia del dropdown de filtro                                                                                                                | *Se muestra el dropdown "Filtrar por Nivel de Aporte" visible<br>*El dropdown tiene un chevron hacia abajo indicando que es funcional<br>*El dropdown está ubicado debajo de los toggle buttons                                                                                                                                                                                   | OK                  |               |              |                |               |
+|                           |                 |                   |             |                                                                                                                      |                                                                                                                                                                                                                                                      |                                                                         |                                |          | Paso6       | Verificar la presencia del botón de nueva relación                                                                                                         | *Se presenta el botón "+ Nueva Relación" en color azul oscuro<br>*El botón está ubicado en la esquina superior derecha de la matriz<br>*El botón es claramente visible y clickeable                                                                                                                                                                                           | OK                  |               |              |                |               |
+|                           |                 |                   |             |                                                                                                                      |                                                                                                                                                                                                                                                      |                                                                         |                                |          | Paso7       | Verificar la estructura completa de filas (RAA) en el eje vertical izquierdo de la matriz                                                                    | *Se muestran todas las filas correspondientes a los códigos RAA en fondo azul oscuro<br>*Los códigos RAA visibles son: 1.1, 1.2, 1.3, 1.4, 2.1, 2.2, 3.1<br>*Cada fila RAA incluye un icono informativo ℹ️ (círculo con "i") a la derecha del código<br>*Las filas mantienen un color consistente azul para todos los códigos RAA                                           | OK                  |               |              |                |               |
+|                           |                 |                   |             |                                                                                                                      |                                                                                                                                                                                                                                                      |                                                                         |                                |          | Paso8       | Verificar la estructura completa de columnas (RA) en el eje horizontal superior de la matriz                                                                 | *Se muestran todas las columnas correspondientes a los códigos RA en encabezado con fondo gris claro<br>*Los códigos RA visibles son: RG1, RG2, RG3, RE1, RE2, RE3, RE4, RE5, RE6<br>*Cada columna RA incluye un icono informativo ℹ️ (círculo con "i") debajo del código<br>*Las columnas están alineadas horizontalmente en la parte superior de la matriz                | OK                  |               |              |                |               |
+|                           |                 |                   |             |                                                                                                                      |                                                                                                                                                                                                                                                      |                                                                         |                                |          | Paso9       | Verificar la cuadrícula completa de intersecciones de la matriz                                                                                             | *Se presenta una cuadrícula completa con todas las intersecciones entre cada RAA (filas) y cada RA (columnas) visibles<br>*Cada intersección forma una celda rectangular individual<br>*La matriz tiene bordes que delimitan claramente cada celda<br>*Se visualiza toda la estructura completa para entender las posibles relaciones de aporte entre RAA y RA                   | OK                  |               |              |                |               |
+| 23-10-2025                | Manual          | Alta              | Media       | HU: Visualizar matriz de relación RAA vs RA - Escenario 2 – Visualizar relaciones RAA-RA existentes en la matriz   | *El usuario debe tener rol de Profesor<br>*Debe estar en la vista de matriz RAA vs RA<br>*Deben existir relaciones previamente establecidas entre RAA y RA en la base de datos<br>*La asignatura debe tener al menos una relación RAA-RA registrada | Verificar visualización correcta de relaciones existentes en la matriz | Asignaturas - Matriz RAA vs RA | Profesor | Paso1       | Observar la matriz completa RAA vs RA tras haber accedido al tab "Matriz RAA vs RA"                                                                          | *La matriz se carga completamente con todas las filas RAA y columnas RA<br>*Se visualiza la cuadrícula completa de intersecciones                                                                                                                                                                                                                                                 | OK                  |               | Positivo     | Funcional      |               |
+|                           |                 |                   |             |                                                                                                                      |                                                                                                                                                                                                                                                      |                                                                         |                                |          | Paso2       | Identificar las celdas que contienen relaciones establecidas en la matriz                                                                                    | *Se muestran celdas con fondo verde claro y checkmark "✓" blanco en las intersecciones donde existe una relación entre un RAA específico y un RA específico<br>*Las celdas verdes se distinguen claramente del fondo blanco de las celdas sin relación<br>*El checkmark "✓" es visible y centrado dentro de cada celda verde                                                 | OK                  |               |              |                |               |
+|                           |                 |                   |             |                                                                                                                      |                                                                                                                                                                                                                                                      |                                                                         |                                |          | Paso3       | Verificar que cada celda verde indica visualmente el aporte de RAA a RA                                                                                      | *Cada celda verde con checkmark indica claramente que ese RAA aporta al RA correspondiente<br>*La relación visual es inmediatamente comprensible<br>*El color verde representa una conexión activa y positiva                                                                                                                                                                    | OK                  |               |              |                |               |
+|                           |                 |                   |             |                                                                                                                      |                                                                                                                                                                                                                                                      |                                                                         |                                |          | Paso4       | Identificar vinculaciones específicas entre códigos RAA y RA en la matriz (ej: verificar celda en intersección RAA 1.1 con RA RE1)                        | *Se puede identificar claramente qué RAA específicos (por ejemplo: 1.1, 1.3, 2.2) están vinculados a qué RA específicos (por ejemplo: RE1, RG2, RE4)<br>*La lectura de filas y columnas permite trazar la relación exacta<br>*Cada vinculación es distinguible individualmente                                                                                              | OK                  |               |              |                |               |
+|                           |                 |                   |             |                                                                                                                      |                                                                                                                                                                                                                                                      |                                                                         |                                |          | Paso5       | Observar la distribución general de aportes a través de toda la matriz                                                                                     | *Se puede visualizar la distribución de celdas verdes a través de toda la matriz<br>*Se identifica patrones de concentración de relaciones (por ejemplo, qué RA reciben más aportes)<br>*Se visualiza la dispersión de las relaciones establecidas                                                                                                                           | OK                  |               |              |                |               |
+|                           |                 |                   |             |                                                                                                                      |                                                                                                                                                                                                                                                      |                                                                         |                                |          | Paso6       | Analizar cómo cada RAA de la asignatura contribuye a los resultados de aprendizaje de la carrera                                                            | *Se puede seguir cada fila RAA horizontalmente para ver a cuántos y cuáles RA contribuye<br>*Se entiende el alcance de contribución de cada RAA individual<br>*Se comprende cómo cada resultado de aprendizaje de la asignatura aporta a las competencias globales                                                                                                             | OK                  |               |              |                |               |
+|                           |                 |                   |             |                                                                                                                      |                                                                                                                                                                                                                                                      |                                                                         |                                |          | Paso7       | Obtener una vista panorámica de todas las relaciones establecidas                                                                                           | *Se obtiene una vista completa y panorámica de todas las relaciones RAA-RA registradas<br>*Se comprende el aporte global de la asignatura a las competencias de la carrera<br>*La matriz funciona como herramienta de análisis visual para entender el mapa completo de contribuciones                                                                                           | OK                  |               |              |                |               |
+| 23-10-2025                | Manual          | Alta              | Baja        | HU: Visualizar matriz de relación RAA vs RA - Escenario 3 – Identificar ausencia de relaciones RAA-RA en la matriz | *El usuario debe tener rol de Profesor<br>*Debe estar visualizando la matriz RAA vs RA<br>*La asignatura debe tener RAA definidos<br>*Deben existir intersecciones sin relaciones establecidas (celdas vacías)                                      | Verificar identificación visual de ausencia de relaciones en la matriz | Asignaturas - Matriz RAA vs RA | Profesor | Paso1       | Observar las intersecciones de la matriz RAA vs RA                                                                                                           | *Se visualiza la cuadrícula completa con todas las intersecciones entre RAA y RA<br>*Se distinguen visualmente dos tipos de celdas: celdas verdes con checkmark y celdas vacías                                                                                                                                                                                                  | OK                  |               | Positivo     | Funcional      |               |
+|                           |                 |                   |             |                                                                                                                      |                                                                                                                                                                                                                                                      |                                                                         |                                |          | Paso2       | Identificar las celdas vacías (sin relación) en la matriz                                                                                                  | *Las celdas vacías no tienen color de fondo verde<br>*Las celdas vacías no tienen checkmark "✓"<br>*Las celdas vacías tienen fondo blanco o sin relleno de color<br>*Las celdas vacías indican claramente que no existe relación entre ese RAA y ese RA específico                                                                                                          | OK                  |               |              |                |               |
+|                           |                 |                   |             |                                                                                                                      |                                                                                                                                                                                                                                                      |                                                                         |                                |          | Paso3       | Identificar visualmente qué RAA no aportan a determinados RA específicos (ej: seguir fila de RAA 1.2 y detectar columnas sin checkmark)                    | *Se puede identificar visualmente, siguiendo una fila RAA horizontalmente, qué columnas RA no tienen checkmark<br>*Se detecta claramente qué RAA no aportan a determinados RA<br>*La ausencia de celda verde indica falta de vinculación                                                                                                                                        | OK                  |               |              |                |               |
+|                           |                 |                   |             |                                                                                                                      |                                                                                                                                                                                                                                                      |                                                                         |                                |          | Paso4       | Detectar qué RA no reciben aporte de ningún RAA de esta asignatura (ej: seguir columna de RA RG1 y detectar si todas las filas están vacías)             | *Se puede detectar, siguiendo una columna RA verticalmente, si no hay ninguna celda verde en toda la columna<br>*Se identifica qué RA no reciben aporte de ningún RAA de la asignatura actual<br>*La columna completamente vacía es visualmente distinguible                                                                                                                    | OK                  |               |              |                |               |
+|                           |                 |                   |             |                                                                                                                      |                                                                                                                                                                                                                                                      |                                                                         |                                |          | Paso5       | Identificar oportunidades para establecer nuevas relaciones                                                                                                  | *Las celdas vacías representan oportunidades potenciales para crear nuevas relaciones<br>*Se identifica visualmente dónde se pueden establecer nuevos vínculos<br>*El botón "+ Nueva Relación" está disponible para crear esas relaciones faltantes                                                                                                                          | OK                  |               |              |                |               |
+|                           |                 |                   |             |                                                                                                                      |                                                                                                                                                                                                                                                      |                                                                         |                                |          | Paso6       | Obtener información clara sobre las ausencias de vinculación                                                                                               | *Se obtiene información clara y visual sobre qué vinculaciones no existen entre los resultados de aprendizaje de la asignatura y los resultados de aprendizaje de la carrera<br>*Se comprende el mapa completo incluyendo tanto las relaciones existentes como las ausentes<br>*La matriz sirve como herramienta de análisis para detectar gaps en la cobertura de competencias | OK                  |               |              |                |               |
